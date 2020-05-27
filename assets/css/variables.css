@@ -1,0 +1,9 @@
+:root {
+  /*--main-color: #71b340;*/
+  --small-margin: 10px;
+  --normal-margin: 20px;
+  --big-margin: 40px;
+  --main-color: #3BA6FF;
+}
+
+@import '../fonts/stylesheet.css';

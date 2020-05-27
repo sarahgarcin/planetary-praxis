@@ -1,0 +1,23 @@
+title: Home
+preset: page
+pages: false
+
+fields:
+  text:
+    label: Presentation text
+    type: markdown
+    size: medium
+  news: 
+    label: News
+    type: structure
+    fields: 
+      cover: 
+        label: Cover image
+        type: files
+        mode: single
+      text: 
+        label: Text
+        type: markdown
+  
+
+

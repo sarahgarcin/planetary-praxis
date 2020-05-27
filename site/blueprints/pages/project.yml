@@ -1,0 +1,15 @@
+title: Project
+preset: page
+pages: false
+
+fields:
+  cover: 
+    label: Cover Image
+    type: files
+  text:
+    label: Text
+    type: markdown
+  link: 
+    label: Link to project page
+    type: url 
+

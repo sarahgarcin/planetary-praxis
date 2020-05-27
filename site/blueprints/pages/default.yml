@@ -1,0 +1,14 @@
+title: Article
+preset: page
+pages: false
+
+fields:
+  text:
+    label: Text
+    type: textarea
+    size: medium
+  related: 
+    label: Related pages
+    type: pages
+    query: page.siblings(false)
+
