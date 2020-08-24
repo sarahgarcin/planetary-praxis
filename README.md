@@ -1,43 +1,106 @@
-# Kirby Dev Kit v3
+# Planetary Praxis kirby theme
 
-This repo is a starting point to use Kirby 3 with Gulp and Npm. It is made for developers to bootstrap their own projects quickly.
+This repo is a kirby theme for Planetary Praxis websites.
 
-## Requirements
+## Installing a new website from the PP theme
 
-You will need Npm and GIT (for the Kirby submodules) to use this project.
+- Download this repository 
 
-## Setup a new project
+- Install it on a server with FTP
 
-1. clone this repo :
-  ```
-  git clone -b v3 https://github.com/julien-gargot/kirby-devkit.git path/to/your-project
-  cd path/to/your-project
-  git submodule update --init
-  cd kirby
-  composer update
-  ```
+- To configure it, go to http://yoursiteaddress/panel
 
-2. install Npm :
-  ```
-  npm install
-  ```
+- Fill the form to create a new account and to install the website 
 
-3. to compile all files, for **development** and **production** :
-  ```
-  gulp
-  ```
+- The panel (website administration interface) should appear
 
-  To make it faster, while developing, you can watch for changes to CSS and JS files in the assets folder. This task only compiles **development** files.
-  ```
-  gulp dev-watch
-  ```
 
-  Same as `gulp dev-watch` with live reload.
-  ```
-  gulp dev-watch-sync
-  ```
+## Add content and create pages
 
-## Configure with your server/site settings
+### The templates
 
-1. rename the file in `site/config/config.localhost.php` to your local development site URL [check out Multi-environment setup](http://getkirby.com/docs/advanced/options). The `environment` variable is used to load minified or unminified CSS/JS versions (checkout `snippets/header.php` and `snippets/footer.php`).
-2. to be able to use browser sync (live reloading, remote debugging, and a few other nice features), set the `localDevUrl` variable to the URL of your site at the top of `gulpfile.js`.
+→ Article template is the basic and default template for article, contact page or about page
+
+→ Home template is the template used for the home page, you should not use it for another page 
+
+→ People template can be use if you want a people page
+
+→ Use the Person template in the people page (People page should have children with Person template)
+
+→ Projects template can be use if you want to have a gallery of projects page
+
+→ Use the Project template in the projects page (Projects page should have children with Project template)
+
+### Writing content with Markdown
+Bold: 
+```**The quick brown fox jumps over the lazy dog**``
+
+Email addresses: 
+```[Send me an email](mailto:support@getkirby.com)```
+
+Headlines: 
+```
+# Headline 1
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+## Headline 2
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+### Headline 3
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+#### Headline 4
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+```
+
+Horizontal rules:
+```****```
+
+Italic text:
+```*The quick brown fox jumps over the lazy dog*```
+
+Links: 
+```[Wikipedia](http://wikipedia.org)```
+or
+```(link: http://wikipedia.org text: Wikipedia)```
+for more options: https://getkirby.com/docs/reference/text/kirbytags/link
+
+Lists: 
+```
+- Homer
+- Marge
+- Bart
+- Lisa
+- Maggie
+```
+
+Quotes: 
+```> Markdown is easy and funny !```
+
+Videos (Youtube or Vimeo):
+```
+(video: http://www.youtube.com/watch?v=lLuc6rtWkrM)
+(video: http://vimeo.com/3432886)
+```
+
+
+### Adding image or file
+
+#### Preparing your image:
+Your images must be light. 
+You should optimize them before sending them to your website.
+The easy way to optimize correctly your image is to use an online compressor, like: https://imagecompressor.com/
+
+#### Adding image or file in text field:
+```
+(image: myawesomepicture.jpg)
+(file: companysecrets.pdf text: Download our company secrets)
+```
+
+You can also click on the clipboard icon in the textarea header to upload or select an image or a file.
+
+For more option:
+Image: https://getkirby.com/docs/reference/text/kirbytags/image 
+File: https://getkirby.com/docs/reference/text/kirbytags/file
+
+
