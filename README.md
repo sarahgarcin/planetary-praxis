@@ -75,7 +75,7 @@ or
 ```
 (link: http://wikipedia.org text: Wikipedia)
 ```
-for more options: [](https://getkirby.com/docs/reference/text/kirbytags/link)
+for more options: https://getkirby.com/docs/reference/text/kirbytags/link
 
 #### Lists: 
 ```
@@ -103,7 +103,7 @@ for more options: [](https://getkirby.com/docs/reference/text/kirbytags/link)
 #### Preparing your image:
 Your images must be light.   
 You should optimize them before sending them to your website.  
-The easy way to optimize correctly your image is to use an online compressor, like: [](https://imagecompressor.com/)
+The easy way to optimize correctly your image is to use an online compressor, like: https://imagecompressor.com/
 
 #### Adding image or file in text field:
 ```
