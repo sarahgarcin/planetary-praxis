@@ -10,10 +10,22 @@
 				if ($related->count() > 0):
 				?>
 				  <h3>Related</h3>
-				  <ul>
+				  <ul class="row">
 				    <?php foreach($related as $article): ?>
-				    <li>
+				    <li class="col-xs-4 col-md-3">
+
 				      <a href="<?= $article->url() ?>">
+				        <?php if($image= $article->cover()->toFile()):?>
+				        	<div class="featured-img-wrapper">
+					        	<div class="featured-img" style="background-image: url('<?=$image->url()?>')"></div>
+										<div class="featured-img background"></div>
+									</div>
+								<?php else:?>
+									<div class="featured-img-wrapper">
+					        	<div class="featured-img" style=""></div>
+										<div class="featured-img background"></div>
+									</div>
+				        <?php endif; ?>
 				        <?= $article->title() ?>
 				      </a>
 				    </li>

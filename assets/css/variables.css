@@ -1,9 +1,8 @@
 :root {
-  /*--main-color: #71b340;*/
   --small-margin: 10px;
   --normal-margin: 20px;
   --big-margin: 40px;
-  --main-color: #3BA6FF;
+  /*--main-color: #3BA6FF;*/
+  --main-color: <?php echo $mainColor; ?>;
+  --title-font: Helvetica, sans-serif;
 }
-
-@import '../fonts/stylesheet.css';

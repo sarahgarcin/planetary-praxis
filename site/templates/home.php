@@ -1,25 +1,27 @@
 <?php snippet('header') ?>
 <?php snippet('menu') ?>
 
-	<main>
-		<section class="introduction col-md-6 col-md-offset-3">
+	<main class='row'>
+		<section class="introduction col-xs-12 col-md-4">
 			<?= $page->text()->kt()?>
 		</section>
-		<section class="news row col-md-10 col-md-offset-1">
+		<section class="news col-xs-12 col-md-8 row">
 			<?php foreach($page->news()->toStructure() as $news):?>
-				<div class="featured-img-wrapper col-md-8">
-					<?php $cover = $news->cover()->toFile()?>
-					<div class="featured-img" style="background-image: url('<?=$cover->url()?>')"></div>
-					<div class="featured-img background"></div>
-				</div>
-				<div class="news-text col-md-4">
-					<?= $news->text()->kt()?>
-				</div>
+				<article class="col-xs-12 col-md-6">
+					<div class="featured-img-wrapper">
+						<?php $cover = $news->cover()->toFile()?>
+						<div class="featured-img" style="background-image: url('<?=$cover->url()?>')"></div>
+						<div class="featured-img background"></div>
+					</div>
+					<div class="news-text">
+						<?= $news->text()->kt()?>
+					</div>
+				</article>
 			<?php endforeach;?>
 		</section>
-		<section class="gallery col-md-10 col-md-offset-1">
-			<?php snippet('projects-list') ?>
-		</section>
+<!-- 		<section class="gallery col-md-10 col-md-offset-1">
+			<?php //snippet('projects-list') ?>
+		</section> -->
 
 	</main>
 

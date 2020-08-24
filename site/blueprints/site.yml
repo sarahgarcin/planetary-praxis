@@ -13,7 +13,7 @@ tabs:
             type: pages
             headline: Pages
   settings:
-    label: Paramètres
+    label: Parameters
     icon: settings
     columns:
       - width: 1/3
@@ -26,21 +26,63 @@ tabs:
       - width: 1/2
         fields:
           logo: 
-            label: Logo du site
-            type: files
-            multiple: false
+            label: Website logo
+            type: structure
+            fields: 
+              first: 
+                label: First part
+                type: text
+              sign:
+                label: Sign
+                type: text
+                help: you can choose a sign here https://unilist.raphaelbastide.com/#shapes
+              second: 
+                label: Second part
+                type: text
+          subtitle:
+            label: Subtitle
+            type: text
+          sitecolor: 
+            label: Website main color
+            type: color
           author: 
-            label: Auteur
+            label: Author(s)
             type: text
           keywords:
-            label: Mots-clés (pour les moteurs de recherche)
+            label: Tags (for search engines)
             type: tags
           description: 
-            label: Description (pour les moteurs de recherche)
+            label: Description (for search engines)
             type: textarea
             size: small
           copyright: 
             label: Copyright
             type: text
+  version: 
+    label: versionning
+    icon: clock
+    columns: 
+      - width: 1/2
+        sections: 
+          revisions:
+            type: gitLog
+            label: History
+            limit: 5
+            kirbyOnly: true  
+      - width: 1/2
+        sections: 
+          log:
+            type: gitRevisions
+            label: Revisions
+            fields:
+              - title
+              - text
+            limit: 5
+            columns:
+              - author
+              - hash
+              - message 
+
+
 
 

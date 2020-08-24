@@ -5,12 +5,13 @@ header{
   position: fixed;
   background: #FFF;
   width: 100%;
+  max-width: 100%;
   z-index:100;
-  height: 70px;
-  padding-top: var(--normal-margin);
-  padding-bottom: var(--normal-margin);
-  /*padding-left: var(--small-margin);*/
-  /*padding-right: var(--small-margin);*/
+  height: 80px;
+  top:0;
+  padding: var(--normal-margin);
+  align-items: center;
+
 }
 
 header.row{
@@ -28,9 +29,9 @@ header h1{
   font-size: 1.5rem;
   line-height: 1.1;
   margin: 0;
-  padding-left: var(--normal-margin);
   cursor:pointer; 
   color: #000; 
+  font-family: Georgia, sans-serif;
 }
 
 header h1 a{
@@ -42,8 +43,16 @@ header h1:hover a{
   border: none;
 }
 
+header h1 .chapeau{
+  display: none; 
+  font-size: 15px;
+  font-style:italic;
+  margin-top:5px;
+  line-height: 1.4;
+}
+
 .sign{
-  color: var(--main-color);;
+  /*color: var(--main-color);*/
   transform: scale(1);
   transition: all 0.2s ease;
   display: inline-block;
@@ -54,59 +63,87 @@ header h1:hover .sign{
 }
 
 header .nav{
-  position: relative;
+  /*position: relative;*/
   padding:0;
-  margin:0;
+  /*font-size: 15px;*/
+}
+
+header .nav:hover{
+  cursor: pointer;
 }
 
 header nav{
-  max-height: 0;
-  overflow: hidden;
-  background: #FFF;
+  /*max-height: 0;*/
+  /*overflow: hidden;*/
+  /*height: 100vh;*/
+  /*width: 35%;*/
+  width:100%.
+  /*padding: 20px;*/
+  padding:0 var(--big-margin) var(--normal-margin);
+  background: rgba(255, 255, 255, 0.9);
+  /*background: var(--main-color);*/
   text-align: right;
-
   position: absolute;
-  right: 0;
+  right: -100%;
   top:100%;
+  font-size: 20px;
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
 
+
+header nav li{
+  margin-bottom: var(--small-margin);
+}
+
 header nav li.active a{
-  color: var(--main-color);
+  /*color: var(--main-color);*/
   border-bottom: 1px solid currentcolor;
 }
 
-input:checked ~ nav {
-  max-height: 500px;
+
+#toggle-menu:checked ~ nav {
+  /*max-height: 500px;*/
   -webkit-transition: max-height .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
   padding:0 var(--big-margin) var(--normal-margin);
-  /*border: 1px solid var(--main-color);*/
+  right: 0px;
 }
 
-input + label{
+#toggle-menu + label{
   width: 100%;
   text-align: right;
 }
 
 
-.span-nochecked, .span-checked{
+#toggle-menu .span-nochecked, #toggle-menu .span-checked{
   cursor:pointer;
   padding-right: var(--big-margin);
   transition: all 0.5s ease;
   margin-bottom: var(--normal-margin);
+  cursor: pointer;
+
 }
 
-.span-nochecked:hover, .span-checked:hover{
+/*#toggle-menu .span-nochecked:hover, #toggle-menu .span-checked:hover{
   color: var(--main-color);
-}
+}*/
  
-input + label .span-nochecked { display: block; }
-input + label .span-checked { display: none;}
+#toggle-menu + label .span-nochecked { display: block; cursor: pointer;}
+#toggle-menu + label .span-checked { display: none; cursor: pointer;}
 
-input:checked + label .span-nochecked { display: none; }
-input:checked + label .span-checked { display: block; }
+#toggle-menu:checked + label .span-nochecked { display: none; }
+/*#toggle-menu:checked + label .span-checked { display: block; border-bottom: 1px solid var(--main-color);}*/
 
+@media only screen and (min-width: 48em) {
+  header nav{
+    width: 35%;
+  }
+
+  header h1 .chapeau{
+    display: block; 
+  }
+
+}
 

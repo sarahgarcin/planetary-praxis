@@ -1,7 +1,7 @@
 <div class="nav col-xs-4 row">
 
 	<input type="checkbox" id="toggle-menu" name="toggle-menu" value="menu-visibility" hidden />
-  <label for="toggle-menu" class="compagnon">
+  <label for="toggle-menu">
     <span class="span-nochecked" aria-label="open Menu">
         menu
     </span>
@@ -11,7 +11,7 @@
   </label>
 
 	<nav class="main-nav col-xs-12" role="navigation">
-		<ul class="main-nav_first-level compagnon">
+		<ul class="main-nav_first-level">
 			<?php foreach($pages->listed() as $p): ?>
 				<li class="<?= r($p->isOpen(), 'active') ?>">
 	        	<a href="<?= $p->url()?>" title="<?= $p->title()?>">
