@@ -114,7 +114,7 @@ The easy way to optimize correctly your image is to use an online compressor, li
 You can also click on the clipboard icon in the textarea header to upload or select an image or a file.
 
 For more option:  
-Image: https://getkirby.com/docs/reference/text/kirbytags/image 
-File: (https://getkirby.com/docs/reference/text/kirbytags/file)
+Image: https://getkirby.com/docs/reference/text/kirbytags/image  
+File: https://getkirby.com/docs/reference/text/kirbytags/file
 
 
