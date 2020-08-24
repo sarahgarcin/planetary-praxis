@@ -59,29 +59,15 @@ tabs:
             label: Copyright
             type: text
   version: 
-    label: versionning
+    label: versioning
     icon: clock
     columns: 
       - width: 1/2
         sections: 
-          revisions:
-            type: gitLog
-            label: History
-            limit: 5
-            kirbyOnly: true  
-      - width: 1/2
-        sections: 
-          log:
-            type: gitRevisions
-            label: Revisions
-            fields:
-              - title
-              - text
-            limit: 5
-            columns:
-              - author
-              - hash
-              - message 
+          changes:
+            type: git
+            headline: Git Status
+ 
 
 
 

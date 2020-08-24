@@ -1,0 +1,27 @@
+Title: Home
+
+----
+
+Text:
+
+# Becoming Planetary
+
+Multiple images stare out from between the lines of this text. They tell planetary stories. They are also forest stories. Through remote sensing, one image captures the accelerating decline and loss of forests in the Amazon.
+
+----
+
+News:
+
+- 
+  cover:
+    - image2.png
+  text: |
+    ## Conference
+    
+    Maecenas quis magna quis enim facilisis maximus vel sed erat. Fusce feugiat accumsan eros quis ultricies. Duis maximus arcu ut tempus ultrices.
+- 
+  cover:
+    - smartforest-ok.jpg
+  text: |
+    ## Smart forest paper
+    Multiple images stare out from between the lines of this text. They tell planetary stories. They are also forest stories. Through remote sensing, one image captures the accelerating decline and loss of forests in the Amazon.

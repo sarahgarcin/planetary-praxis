@@ -1,26 +1,28 @@
 <?php
 
-require_once __DIR__ . DS . 'GitHelper.php';
-$gitHelper = new GitHelper();
+namespace Oblik\KirbyGit;
 
+use Kirby\Cms\App;
 
-Kirby::plugin('wottpal/git', [
+require_once 'lib/util.php';
 
-  'options' => [
-    'dir' => 'index', // or e.g. 'content'
-    'branch' => 'master',
-    'shouldPull' => false,
-    'shouldPush' => false,
-    'shouldCommit' => false,
-    'userHooks' => false,
-    'gitBin' => '',
-    'windowsMode' => false,
-    'debug' => false,
-    'logFile' => 'git-log.txt'
-  ],
+load([
+	'Oblik\\KirbyGit\\Git' => 'lib/Git.php'
+], __DIR__);
 
-  'hooks' => require_once __DIR__ . DS . 'hooks.php',
-
-  'sections' => require_once __DIR__ . DS . 'sections.php',
-
+App::plugin('oblik/git', [
+	'options' => [
+		'bin' => 'git',
+		'repo' => kirby()->root('index'),
+		'remote' => 'origin',
+		'merge' => 'master',
+		'log' => false
+	],
+	'sections' => [
+		'git' => require 'lib/section.php'
+	],
+	'api' => [
+		'routes' => require 'lib/routes.php'
+	],
+	'hooks' => require 'lib/hooks.php'
 ]);

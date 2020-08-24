@@ -1,0 +1,34 @@
+Title: Planetary Praxis
+
+----
+
+Logo:
+
+- 
+  first: Planetary
+  sign: ◎
+  second: Praxis
+
+----
+
+Subtitle: 
+
+----
+
+Sitecolor: #3BA6FF
+
+----
+
+Author: 
+
+----
+
+Keywords: 
+
+----
+
+Description: 
+
+----
+
+Copyright: 

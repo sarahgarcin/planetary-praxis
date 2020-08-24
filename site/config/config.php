@@ -22,16 +22,10 @@ return [
       ]
   	]
   ],
-  'smartypants' => true, 
-  'dir' => 'index',         // *
-  'branch' => 'master',
-  'shouldPull' => false,
-  'shouldPush' => false,
-  'shouldCommit' => false,
-  'userHooks' => false,     // **
-  'gitBin' => '',
-  'windowsMode' => false,
-  'debug' => false,
-  'logFile' => 'git-log.txt'
+  'smartypants' => true,
+  'oblik.git.hooks' => [
+      'site.update:after',
+      'page.update:after'
+  ]
 ];
 

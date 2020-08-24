@@ -1,0 +1,2 @@
+[2020-08-24, 11:31] Unable to update git: Git class not found. Is the Git.php submodule installed?
+[2020-08-24, 11:31] Unable to update git: Git class not found. Is the Git.php submodule installed?

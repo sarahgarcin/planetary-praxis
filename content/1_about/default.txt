@@ -1,0 +1,27 @@
+Title: About
+
+----
+
+Text:
+
+# Becoming Planetary
+## Being human is a praxis.
+test
+Multiple images stare out from between the lines of this text. They tell planetary stories. They are also forest stories. Through remote sensing, one image captures the accelerating decline and loss of forests in the Amazon[^The Amazon rainforest is a moist broadleaf tropical rainforest in the Amazon biome that covers most of the Amazon basin of South America.]. This time-lapse image produced by NASA begins in 2000 with an intact patch of forest green in Rondônia, Brazil[^Brasil is a country in South America.]. Over the course of twelve years, roads and settlements encroach upon and fragment the forest into corridors and swathes of brown terrain. By 2012, this same forest section had been turned into a pockmarked landscape, the work of extraction evident through the steady consumption of forest-as-resource. Another image switches from remote sensing to (link: http://test.com text: LIDAR) scanning of the Black Forest in Germany. Forests are being lost, as the remote-sensing images indicate, yet they are also changing in structure and, in some cases, with ongoing resource and capital accumulation, losing their ability to store carbon.
+
+(bigimage: image2.png caption:Terrestrial Laser Scanning of a "Plenterwald" Forest in Southwest Germany, 2014. Source: Landconsult.de.)
+
+### test de h3
+Yet another image shifts from these monitoring-based documents of forest decline to protestors occupying tree canopies in an attempt to halt their decline and destruction. Cables and wires secure figures in mid-air, attached to trunks, suspended in the thick of trees and impending logging activity. A final image moves from mass resistors protesting the construction of the Newbury Bypass in the UK to Palawan tribes harvesting honey from hives in Ginuqu trees in the Philippines, where for over a decade mining activity has threatened forests and forest-based ways of life. Here are forest people, subjects made with and through forest practices. Each of these images suggests ways in which to figure and reconfigure human-planetary relations.
+
+(image: image4.png caption: A Palawan climbing an aerial bridge made of rattan canes to reach a ginuqu tree canopy. Photo: Dario Novellino.)
+
+The forest, carbon, and media imaginaries that are captured in these different images tell diverse stories that span the remote, the durational, the extractive, the accumulative, the inhabited, and the contested. Forest media differently signal the configuration of the planetary and planetary subjects. Images such as these are increasingly common, charting the loss of forests as carbon sinks, the accumulation of heat leading to climate change, and the human subjects who are variously constituted along with these shifting environments. The planet transitions from forest to development, and remote and ubiquitous sensing technologies monitor, log, and display these changing conditions, as humans enter the frame as a diverse array of Earthlings, from remote scientists to protestors or pre-capitalist figures. With over four billion hectares of forest worldwide, these forests and their inhabitants are increasingly captured through monitoring and sensing media that seemingly provide a more planetary understanding of forests as systems. Yet these images also lead one to ask: In what ways does the planetary become evident—whether as object, process, or event? How is the planetary configured, rather than assumed and given? Is it only at the most zoomed-out scale of remote sensing, or through the LIDAR scanning of forests? Is the planetary evident in the temporal processes that endure over time and register through the composition of a forest, or through the occupation of a forest canopy or treetop?
+
+----
+
+Related:
+
+- projects/smart-forest
+- projects/citizen-sense
+- contact
