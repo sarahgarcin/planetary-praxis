@@ -8,7 +8,7 @@ This repo is a kirby theme for Planetary Praxis websites.
 
 - Install it on a server with FTP
 
-- To configure it, go to http://yoursiteaddress/panel
+- To configure it, go to http://yoursiteaddress.com/panel
 
 - Fill the form to create a new account and to install the website 
 
@@ -75,7 +75,7 @@ or
 ```
 (link: http://wikipedia.org text: Wikipedia)
 ```
-for more options: https://getkirby.com/docs/reference/text/kirbytags/link
+for more options: [](https://getkirby.com/docs/reference/text/kirbytags/link)
 
 #### Lists: 
 ```
@@ -103,18 +103,18 @@ for more options: https://getkirby.com/docs/reference/text/kirbytags/link
 #### Preparing your image:
 Your images must be light.   
 You should optimize them before sending them to your website.  
-The easy way to optimize correctly your image is to use an online compressor, like: https://imagecompressor.com/
+The easy way to optimize correctly your image is to use an online compressor, like: [](https://imagecompressor.com/)
 
 #### Adding image or file in text field:
 ```
 (image: myawesomepicture.jpg)
 (file: companysecrets.pdf text: Download our company secrets)
-``
+```
 
 You can also click on the clipboard icon in the textarea header to upload or select an image or a file.
 
 For more option:  
-Image: https://getkirby.com/docs/reference/text/kirbytags/image   
-File: https://getkirby.com/docs/reference/text/kirbytags/file
+Image: [](https://getkirby.com/docs/reference/text/kirbytags/image)  
+File: [](https://getkirby.com/docs/reference/text/kirbytags/file)
 
 
