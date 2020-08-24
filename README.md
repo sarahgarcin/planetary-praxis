@@ -32,17 +32,17 @@ This repo is a kirby theme for Planetary Praxis websites.
 → Use the **Project** template in the projects page (**Projects** page should have children with **Project** template)
 
 ### Writing content with Markdown
-Bold: 
+#### Bold: 
 ```
 **The quick brown fox jumps over the lazy dog**
 ```
 
-Email addresses: 
+#### Email addresses: 
 ```
 [Send me an email](mailto:support@getkirby.com)
 ```
 
-Headlines: 
+#### Headlines: 
 ```
 # Headline 1
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -57,17 +57,17 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 ```
 
-Horizontal rules:
+#### Horizontal rules:
 ```
 ****
 ```
 
-Italic text:
+#### Italic text:
 ```
 *The quick brown fox jumps over the lazy dog*
 ```
 
-Links: 
+#### Links: 
 ```
 [Wikipedia](http://wikipedia.org)
 ```
@@ -77,7 +77,7 @@ or
 ```
 for more options: https://getkirby.com/docs/reference/text/kirbytags/link
 
-Lists: 
+#### Lists: 
 ```
 - Homer
 - Marge
@@ -86,12 +86,12 @@ Lists:
 - Maggie
 ```
 
-Quotes: 
+#### Quotes: 
 ```
 > Markdown is easy and funny !
 ```
 
-Videos (Youtube or Vimeo):
+#### Videos (Youtube or Vimeo):
 ```
 (video: http://www.youtube.com/watch?v=lLuc6rtWkrM)
 (video: http://vimeo.com/3432886)
