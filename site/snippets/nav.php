@@ -1,4 +1,4 @@
-<div class="nav col-xs-4 row">
+<div class="nav col-xs-4">
 
 	<input type="checkbox" id="toggle-menu" name="toggle-menu" value="menu-visibility" hidden />
   <label for="toggle-menu">
@@ -20,6 +20,15 @@
 	      </li>
 			<?php endforeach; ?>
 		</ul>
+		<div class="searchbar">
+			<?php 
+			$query   = get('q');
+			?>
+			<form action= <?= ($p = page('search')) ? $p->url() : '' ?>>
+			  <input type="search" name="q" value="<?= html($query) ?>" placeholder="Search…">
+			  <input type="submit" value="Ok">
+			</form>
+		</div>
 
 	</nav>
 

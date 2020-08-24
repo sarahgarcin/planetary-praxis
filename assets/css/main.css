@@ -454,6 +454,14 @@ main .content figure {
   padding-right: var(--big-margin);
 }
 
+.content .person-header-text .featured-img-wrapper{
+    width: 100%;
+    max-width: 900px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
 .person-header-text{
   /*margin-left: var(--small-margin);*/
 }
@@ -466,6 +474,44 @@ main .content figure {
 .person-header-text p{
   margin:0;
   margin-bottom: 3px;
+}
+
+.search ul{
+  margin-top: var(--normal-margin);
+}
+
+.search ul li{
+  font-size: 23px;
+  margin-bottom: var(--small-margin);
+  padding-bottom: var(--small-margin);
+  border-bottom: 1px solid grey;
+}
+
+.search ul li a:hover{
+  border-bottom: none;
+}
+
+.searchbar{
+  text-align:right;
+}
+
+.searchbar input[type="search"]{
+  border:none;
+  border: 1px solid #000;
+  background: transparent;
+  font-size: 17px;
+  font-family: Georgia, sans-serif;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.searchbar input[type="submit"]{
+  font-size: 17px;
+  background: transparent;
+  cursor: pointer;
+  /*border: none;*/
+  font-family: Georgia, sans-serif;
+  height: 30px;
 }
 
 /* ------- F I N      P R O J E C T S  ----------*/
@@ -489,7 +535,7 @@ main .content figure {
 
   /* default */
 
-  .content h1,  .content h2,  .content h3,  .content p,  .content ul, .content ol, .content figcaption, .content figure:not(.bigimage), .content .featured-img-wrapper, .content hr{
+  .content h1,  .content h2,  .content h3,  .content p,  .content ul, .content ol, .content figcaption, .content figure:not(.bigimage), .content hr{
     width: 55%;
     max-width: 900px;
     margin-left:auto;
@@ -499,6 +545,11 @@ main .content figure {
 
   .content figure:not(.bigimage) figcaption{
     width: 100%;
+  }
+
+  .content .person-header-text .featured-img-wrapper{
+    width: 55%;
+
   }
 
   h2 {font-size: 35px;}

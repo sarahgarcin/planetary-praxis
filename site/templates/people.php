@@ -9,7 +9,7 @@
 		<section class="gallery col-xs-12 col-md-9">
 			<ul class="projects row">
 				<?php foreach($page->children()->listed() as $person):?>
-					<li class="col-md-12">
+					<li class="col-xs-12">
 						<article class="row">
 							<div class="featured-img-wrapper col-xs-3">
 								<?php $cover = $person->photo()->toFile()?>

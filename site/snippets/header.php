@@ -27,6 +27,10 @@
     }
     #toggle-menu:checked + label .span-checked { display: block; border-bottom: 1px solid <?php echo $mainColor; ?>;
     }
+
+    .searchbar input[type="submit"]{
+      border: 1px solid <?php echo $mainColor; ?>;
+    }
     /* FIN HEADER */
 
     /* MAIN */
