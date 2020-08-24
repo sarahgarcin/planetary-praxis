@@ -4,6 +4,5 @@ package-lock.json
 
 /media
 /node_modules
-/site/accounts
 /site/cache
 /site/sessions

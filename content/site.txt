@@ -1,13 +1,13 @@
-Title: Planetary Praxis
+Title: Smart Forests
 
 ----
 
 Logo:
 
 - 
-  first: Planetary
-  sign: ◎
-  second: Praxis
+  first: Smart
+  sign: ◍
+  second: Forests
 
 ----
 
@@ -15,7 +15,7 @@ Subtitle:
 
 ----
 
-Sitecolor: #3BA6FF
+Sitecolor: #71B340
 
 ----
 
