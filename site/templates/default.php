@@ -3,7 +3,7 @@
 	
 	<main>			
 		<div class="content">
-			<?= $page->text()->ft()?>
+			<?= $page->text()->kt()?>
 			<div id="related">
 				<?php
 				$related = $page->related()->toPages();

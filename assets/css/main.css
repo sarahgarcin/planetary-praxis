@@ -454,6 +454,20 @@ main .content figure {
   padding-right: var(--big-margin);
 }
 
+.person-header-text{
+  /*margin-left: var(--small-margin);*/
+}
+
+
+.person-header-text h1{
+  /*margin-top: 0;*/
+}
+
+.person-header-text p{
+  margin:0;
+  margin-bottom: 3px;
+}
+
 /* ------- F I N      P R O J E C T S  ----------*/
 
 
@@ -475,7 +489,7 @@ main .content figure {
 
   /* default */
 
-  .content h1,  .content h2,  .content h3,  .content p,  .content ul, .content ol, .content figcaption, .content figure:not(.bigimage){
+  .content h1,  .content h2,  .content h3,  .content p,  .content ul, .content ol, .content figcaption, .content figure:not(.bigimage), .content .featured-img-wrapper, .content hr{
     width: 55%;
     max-width: 900px;
     margin-left:auto;

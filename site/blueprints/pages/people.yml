@@ -1,0 +1,31 @@
+title: People
+pages: true
+
+
+columns:
+  - width: 1/2
+    sections:
+      drafts:
+        headline: Drafts
+        type: pages
+        status: draft
+        templates: person
+
+      published:
+        headline: Published Articles
+        type: pages
+        status: listed
+        templates: person
+  - width: 1/2
+    fields:
+      text: 
+        label: Projects text presentation
+        type: markdown
+
+
+
+
+
+
+
+

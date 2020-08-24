@@ -22,10 +22,6 @@ return [
       ]
   	]
   ],
-  'smartypants' => true,
-  'oblik.git.hooks' => [
-      'site.update:after',
-      'page.update:after'
-  ]
+  'smartypants' => true
 ];
 

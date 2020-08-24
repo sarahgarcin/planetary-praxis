@@ -1,0 +1,34 @@
+title: Person
+preset: page
+pages: false
+
+fields:
+  role: 
+    label: Role
+    type: text
+  email: 
+    label: Email
+    type: email
+  links: 
+    label: Links
+    type: structure
+    fields:
+      link: 
+        label: Link
+        type: url 
+      text: 
+        label: Text for the link
+        type: text
+  photo: 
+    label: Picture
+    type: files
+    mode: single
+  summary: 
+    label: Summary
+    type: markdown
+  text: 
+    label: Full Text
+    type: markdown
+  publications: 
+    label: List of publications
+    type: markdown

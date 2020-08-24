@@ -30,6 +30,9 @@
     /* FIN HEADER */
 
     /* MAIN */
+    hr{
+      border: 1px solid <?php echo $mainColor; ?>;
+    }
     a:hover {
       color: <?php echo $mainColor; ?>;
     }

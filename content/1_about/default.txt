@@ -6,7 +6,7 @@ Text:
 
 # Becoming Planetary
 ## Being human is a praxis.
-test
+test hello
 Multiple images stare out from between the lines of this text. They tell planetary stories. They are also forest stories. Through remote sensing, one image captures the accelerating decline and loss of forests in the Amazon[^The Amazon rainforest is a moist broadleaf tropical rainforest in the Amazon biome that covers most of the Amazon basin of South America.]. This time-lapse image produced by NASA begins in 2000 with an intact patch of forest green in Rondônia, Brazil[^Brasil is a country in South America.]. Over the course of twelve years, roads and settlements encroach upon and fragment the forest into corridors and swathes of brown terrain. By 2012, this same forest section had been turned into a pockmarked landscape, the work of extraction evident through the steady consumption of forest-as-resource. Another image switches from remote sensing to (link: http://test.com text: LIDAR) scanning of the Black Forest in Germany. Forests are being lost, as the remote-sensing images indicate, yet they are also changing in structure and, in some cases, with ongoing resource and capital accumulation, losing their ability to store carbon.
 
 (bigimage: image2.png caption:Terrestrial Laser Scanning of a "Plenterwald" Forest in Southwest Germany, 2014. Source: Landconsult.de.)

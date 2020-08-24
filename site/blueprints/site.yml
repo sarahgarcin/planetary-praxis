@@ -58,15 +58,6 @@ tabs:
           copyright: 
             label: Copyright
             type: text
-  version: 
-    label: versioning
-    icon: clock
-    columns: 
-      - width: 1/2
-        sections: 
-          changes:
-            type: git
-            headline: Git Status
  
 
 
