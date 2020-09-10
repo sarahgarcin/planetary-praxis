@@ -78,6 +78,7 @@ h2, h3{
   /*font-size: 35px;*/
   font-size: 23px;
   margin-bottom: 0;
+  line-height: 1.4;
 }
 
 h3{
@@ -165,7 +166,7 @@ main .content figure {
 .gallery h2{
   font-style:normal;
   margin-top:6px;
-  margin-bottom:6px;
+  margin-bottom:0;
   font-size: 30px;
 }
 
@@ -186,8 +187,9 @@ main .content figure {
 
 .news h2{
   margin-top: 0;
+  margin-bottom: 0;
   font-size: 18px;
-  margin-bottom: var(--small-margin);
+  /*margin-bottom: var(--small-margin);*/
 }
 
 .news .featured-img{
@@ -340,7 +342,7 @@ main .content figure {
 
   .menu-secondaire .footnotes-window{
     padding: var(--big-margin); 
-    padding-bottom: 0;
+    padding-bottom: var(--normal-margin);
   }
 
   .menu-secondaire .footnotes-window #footnotes{
@@ -432,9 +434,9 @@ main .content figure {
 
 
 .gallery h2{
-  margin-top: 0;
+  margin: 0;
   font-size: 18px;
-  margin-bottom: var(--small-margin);
+  /*margin-bottom: var(--small-margin);*/
 }
 
 .gallery .featured-img{
@@ -525,7 +527,7 @@ main .content figure {
 
   /* home*/
   .news{
-    margin-top:  var(--big-margin);
+    margin-top:  var(--normal-margin);
   }
 
   .news article{

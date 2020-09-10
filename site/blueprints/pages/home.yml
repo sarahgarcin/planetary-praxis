@@ -18,6 +18,9 @@ fields:
       text: 
         label: Text
         type: markdown
+      link: 
+        label: Link to external or internal page
+        type: url
   
 
 

@@ -97,6 +97,10 @@ for more options: https://getkirby.com/docs/reference/text/kirbytags/link
 (video: http://vimeo.com/3432886)
 ```
 
+#### Footnotes
+```
+the text you want to add a footnote to[^the footnote]
+```
 
 ### Adding image or file
 
@@ -105,10 +109,15 @@ Your images must be light.
 You should optimize them before sending them to your website.  
 The easy way to optimize correctly your image is to use an online compressor, like: https://imagecompressor.com/
 
-#### Adding image or file in text field:
+#### Adding image or file in textarea field:
 ```
-(image: myawesomepicture.jpg)
+(image: myawesomepicture.jpg caption: my awesome caption)
 (file: companysecrets.pdf text: Download our company secrets)
+```
+
+##### Adding big image in textarea field
+```
+(bigimage: yourimage.jpg caption: the caption)
 ```
 
 You can also click on the clipboard icon in the textarea header to upload or select an image or a file.
