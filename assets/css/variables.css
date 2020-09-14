@@ -6,3 +6,11 @@
   --main-color: <?php echo $mainColor; ?>;
   --title-font: Helvetica, sans-serif;
 }
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    src: url('../fonts/fa-brands-400.woff2') format('woff2'),
+        url('../fonts/fa-brands-400.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

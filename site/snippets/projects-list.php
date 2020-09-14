@@ -1,6 +1,6 @@
 <ul class="projects row">
 	<?php foreach($site->find('projects')->children()->listed() as $project):?>
-		<li class="col-md-6">
+		<li class="col-sm-6 col-md-6">
 			<article>
 				<?php if($project->link()->isNotEmpty()):?>
 					<a href="<?= $project->link() ?>" title="<?= $project->title()?>">

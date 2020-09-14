@@ -62,6 +62,7 @@
   </style>
 
   <?php echo css('assets/css/flexboxgrid.min.css') ?>
+  <?php echo css('assets/css/fontawesome.min.css') ?>
   <?php echo css('assets/css/main.css') ?>
   <?php echo css('assets/css/header.css') ?>
 

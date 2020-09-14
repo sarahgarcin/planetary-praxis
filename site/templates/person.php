@@ -6,10 +6,9 @@
 			<div class="person-header-text">
 				<div class="featured-img-wrapper">
 					<?php $cover = $page->photo()->toFile()?>
-					<div class="featured-img  col-xs-6 col-md-4" style="background-image: url('<?=$cover->url()?>')"></div>
-					<div class="featured-img background col-xs-6  col-md-4"></div>
+					<div class="featured-img col-xs-6 col-md-4" style="background-image: url('<?=$cover->url()?>')"></div>
 				</div>
-				<div class="person-header-text">
+				<div class="person-text">
 					<h1><?= $page->title()?></h1>
 					<p class="person-role"><?= $page->role()?></p>
 					<p class="person-email">

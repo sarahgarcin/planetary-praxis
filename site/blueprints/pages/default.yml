@@ -3,6 +3,9 @@ preset: page
 pages: false
 
 fields:
+  cover: 
+    label: Cover Image
+    type: files
   text:
     label: Text
     type: textarea

@@ -11,17 +11,20 @@
 				<?php foreach($page->children()->listed() as $person):?>
 					<li class="col-xs-12">
 						<article class="row">
-							<div class="featured-img-wrapper col-xs-3">
-								<?php $cover = $person->photo()->toFile()?>
-								<div class="featured-img" style="background-image: url('<?=$cover->url()?>')"></div>
-								<div class="featured-img background"></div>
-							</div>
-							<div class="person-presentation col-xs-9">
+							<?php if($cover = $person->photo()->toFile()):?>
+								<div class="featured-img-wrapper col-xs-8 col-sm-3">
+									<a href="<?= $person->url()?>" title="<?= $person->title()?>">
+										<div class="featured-img" style="background-image: url('<?=$cover->url()?>')"></div>
+										<div class="featured-img background"></div>
+									</a>
+								</div>
+							<?php endif?>
+							<div class="person-presentation col-xs-12 col-sm-9">
 								<h2 class="person-title"><?= $person->title()?></h2>
 								<p class="person-role"><?= $person->role()?></p>
 								<hr>
 								<?= $person->summary()->kt()?>
-								<p><a href="<?= $person->url()?>" title="<?= $person->title()?>">Read more</a>
+								<p class="read-more"><a href="<?= $person->url()?>" title="<?= $person->title()?>">Read more</a>
 								</p>
 							</div>
 							

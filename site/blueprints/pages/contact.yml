@@ -1,0 +1,32 @@
+title: Article
+preset: page
+pages: false
+
+fields:
+  cover: 
+    label: Cover Image
+    type: files
+  text:
+    label: Text
+    type: textarea
+    size: medium
+  social:
+    label: Social networks
+    type: structure
+    fields:
+      icon: 
+        label: Icon
+        type: text
+        help: Find the icon here:https://fontawesome.com/icons?from=io - copy paste only the fa-name here (exemple:fa-twitter)
+      url: 
+        label: Url 
+        type: url
+  notes:
+    label: About this website
+    type: textarea
+    size: small
+  related: 
+    label: Related pages
+    type: pages
+    query: page.siblings(false)
+

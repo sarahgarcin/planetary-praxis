@@ -9,8 +9,10 @@
 			<section class="news col-xs-12 col-md-8 row">
 				<?php foreach($page->news()->toStructure() as $news):?>
 					<article class="col-xs-12 col-md-6">
-						<?php if($news->link()->isNotEmpty()):?>
-						<a href="<?= $news->link() ?>" title="<?= $news->title() ?>">
+						<?php if($news->linkexternal()->isNotEmpty()):?>
+							<a href="<?= $news->linkexternal() ?>" title="<?= $news->text() ?>">
+						<?php elseif($internal = $news->linkinternal()->toPage()):?>
+							<a href="<?= $internal->url() ?>" title="<?= $news->text() ?>">
 						<?php endif;?>
 							<?php if($news->cover()->isNotEmpty()):?>
 								<div class="featured-img-wrapper">
@@ -22,7 +24,7 @@
 							<div class="news-text">
 								<?= $news->text()->kt()?>
 							</div>
-						<?php if($news->link()->isNotEmpty()):?>
+						<?php if($news->linkexternal()->isNotEmpty() || $news->linkinternal()->isNotEmpty()):?>
 						</a>
 						<?php endif;?>
 					</article>

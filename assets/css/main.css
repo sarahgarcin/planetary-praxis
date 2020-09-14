@@ -64,7 +64,7 @@ figcaption{
 
 h1{
   font-family: var(--title-font);
-  font-size: 60px;
+  font-size: 45px;
   margin-bottom: 0;
   margin-top: var(--normal-margin);
   font-weight: bold;
@@ -126,7 +126,7 @@ main .content figure {
 
 .featured-img{
   width: 100%;
-  min-height: 220px;
+  min-height: 150px;
 }
 .featured-img{
   filter: grayscale(1) contrast(2);
@@ -213,7 +213,38 @@ main .content figure {
 /*------- F I N     H O M E ----------*/
 
 /* ------- D E F A U L T ----------*/
-  
+  .social ul > li{
+    font-size: 32px;
+    margin-right: 20px;
+  }
+
+  .social ul{
+    margin-left: 0;
+  }
+
+  .social a:hover{
+    border-bottom:none;
+  }
+
+  .content .about-this-website p, .about-this-website ul{
+    font-size: 14px; 
+  }
+
+  .content .about-this-website p {
+    margin-bottom: 5px;
+  }
+
+  .content .about-this-website ul{
+    margin-top: 0; 
+    padding-left: var(--big-margin);
+  }
+  .content .about-this-website ul li{
+    list-style: disc; 
+  }
+  .content .about-this-website ul li a{
+    border-bottom: 1px solid var(--main-color);
+  }
+
   a.anchor{
     position: relative;
     top: -250px;
@@ -263,6 +294,10 @@ main .content figure {
     margin-bottom: var(--normal-margin);
   }
 
+  #related ul{
+    padding: 0 1em;
+  }
+
   #related li{
     margin-bottom: var(--normal-margin);
     padding-right: 5px;
@@ -278,7 +313,7 @@ main .content figure {
   }
 
   #related .featured-img{
-    height: 120px;
+    height: 23vw;
     min-height: 50px;
   }
 
@@ -420,19 +455,6 @@ main .content figure {
 
 /* ------- P R O J E C T S  ----------*/
 
-/*h1 + .gallery{
-  margin-top: var(--big-margin);
-}
-
-.gallery h2{
- font-weight: normal;
- margin-top: var(--small-margin);
- margin-bottom: 0;
- line-height: 1.2;
-}*/
-
-
-
 .gallery h2{
   margin: 0;
   font-size: 18px;
@@ -440,7 +462,7 @@ main .content figure {
 }
 
 .gallery .featured-img{
-  height: 250px;
+  height: 5vw;
   margin-bottom: var(--normal-margin);
 }
 
@@ -448,6 +470,10 @@ main .content figure {
   font-size: 15px;
   margin-top: 0;
   /*padding-left: 2rem;*/
+}
+
+.gallery p.read-more{
+  margin-top: var(--normal-margin);
 }
 
 
@@ -461,22 +487,29 @@ main .content figure {
     max-width: 900px;
     margin-left:auto;
     margin-right:auto;
+    transition: none;
 
 }
 
-.person-header-text{
-  /*margin-left: var(--small-margin);*/
+.content .person-header-text .featured-img-wrapper:hover {
+    opacity: 1;
 }
 
-
-.person-header-text h1{
-  /*margin-top: 0;*/
+.content .person-header-text .featured-img{
+  filter: none;
 }
+
 
 .person-header-text p{
   margin:0;
   margin-bottom: 3px;
 }
+
+.person-presentation{
+  padding: 0;
+}
+
+
 
 .search ul{
   margin-top: var(--normal-margin);
@@ -521,6 +554,10 @@ main .content figure {
 
 @media only screen and (min-width: 48em) {
 
+  h1{
+    font-size: 60px;
+  }
+
   main.row, main {
     padding: 140px var(--normal-margin) 0px var(--normal-margin);
   }
@@ -549,6 +586,10 @@ main .content figure {
     width: 100%;
   }
 
+  .content .bigimage figcaption{
+    padding: 0 var(--small-margin);
+  }
+
   .content .person-header-text .featured-img-wrapper{
     width: 55%;
 
@@ -556,14 +597,38 @@ main .content figure {
 
   h2 {font-size: 35px;}
 
+  #related ul{
+    padding: 0;
+  }
+
   #related li{
     padding-right: var(--normal-margin);
     padding-left: 0;
   }
 
+  #related .featured-img{
+    height: 10vw;
+    min-height: 50px;
+  }
+
+
   /* projects*/
   .gallery{
     margin-top:  var(--big-margin);
+  }
+
+  .gallery .featured-img{
+    height: 10vw;
+    margin-bottom: var(--normal-margin);
+  }
+
+  .featured-img{
+    width: 100%;
+    min-height: 220px;
+  }
+
+  .person-presentation{
+    padding: 0 1em;
   }
 
   /*general*/

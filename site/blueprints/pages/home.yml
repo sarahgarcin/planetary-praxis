@@ -18,9 +18,15 @@ fields:
       text: 
         label: Text
         type: markdown
-      link: 
-        label: Link to external or internal page
+      linkexternal: 
+        label: Link to external page
         type: url
+      linkinternal: 
+        label: Link to internal page
+        type: pages
+        query: site.index
+        multiple: false
+        help: Choose a page in the list below 
   
 
 
