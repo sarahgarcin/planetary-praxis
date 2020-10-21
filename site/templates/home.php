@@ -10,7 +10,7 @@
 				<?php foreach($page->news()->toStructure() as $news):?>
 					<article class="col-xs-12 col-md-6">
 						<?php if($news->linkexternal()->isNotEmpty()):?>
-							<a href="<?= $news->linkexternal() ?>" title="<?= $news->text() ?>">
+							<a href="<?= $news->linkexternal() ?>" title="<?= $news->text() ?>" target="_blank">
 						<?php elseif($internal = $news->linkinternal()->toPage()):?>
 							<a href="<?= $internal->url() ?>" title="<?= $news->text() ?>">
 						<?php endif;?>

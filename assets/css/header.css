@@ -52,7 +52,6 @@ header h1 .chapeau{
 }
 
 .sign{
-  /*color: var(--main-color);*/
   transform: scale(1);
   transition: all 0.2s ease;
   display: inline-block;
@@ -63,9 +62,7 @@ header h1:hover .sign{
 }
 
 header .nav{
-  /*position: relative;*/
   padding:0;
-  /*font-size: 15px;*/
 }
 
 header .nav:hover{
@@ -73,15 +70,9 @@ header .nav:hover{
 }
 
 header nav{
-  /*max-height: 0;*/
-  /*overflow: hidden;*/
-  /*height: 100vh;*/
-  /*width: 35%;*/
-  width:100%.
-  /*padding: 20px;*/
+  width:100%;
   padding:0 var(--big-margin) var(--normal-margin);
   background: rgba(255, 255, 255, 0.9);
-  /*background: var(--main-color);*/
   text-align: right;
   position: absolute;
   right: -100%;
@@ -97,13 +88,11 @@ header nav li{
 }
 
 header nav li.active a{
-  /*color: var(--main-color);*/
   border-bottom: 1px solid currentcolor;
 }
 
 
 #toggle-menu:checked ~ nav {
-  /*max-height: 500px;*/
   -webkit-transition: max-height .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
@@ -126,15 +115,11 @@ header nav li.active a{
 
 }
 
-/*#toggle-menu .span-nochecked:hover, #toggle-menu .span-checked:hover{
-  color: var(--main-color);
-}*/
  
 #toggle-menu + label .span-nochecked { display: block; cursor: pointer;}
 #toggle-menu + label .span-checked { display: none; cursor: pointer;}
 
 #toggle-menu:checked + label .span-nochecked { display: none; }
-/*#toggle-menu:checked + label .span-checked { display: block; border-bottom: 1px solid var(--main-color);}*/
 
 @media only screen and (min-width: 48em) {
   header nav{

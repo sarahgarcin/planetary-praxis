@@ -19,7 +19,7 @@
 									</a>
 								</div>
 							<?php endif?>
-							<div class="person-presentation col-xs-12 col-sm-9">
+							<div class="person-presentation col-xs-12 col-sm-9 col-xl-6">
 								<h2 class="person-title"><?= $person->title()?></h2>
 								<p class="person-role"><?= $person->role()?></p>
 								<hr>

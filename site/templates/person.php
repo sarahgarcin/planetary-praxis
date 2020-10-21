@@ -14,7 +14,6 @@
 					<p class="person-email">
 						<a href="mailto:<?= $page->email()?>"><?= $page->email()?></a>
 					</p>
-					<!-- <ul class="person-links"> -->
 					<?php $links = $page->links()->toStructure();
 					foreach($links as $link):?>
 						<p>
@@ -23,7 +22,6 @@
 							</a>
 						</p>
 					<?php endforeach?>
-					<!-- </ul> -->
 				</div>
 			</div>
 			

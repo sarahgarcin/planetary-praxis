@@ -1,9 +1,9 @@
 <ul class="projects row">
 	<?php foreach($site->find('projects')->children()->listed() as $project):?>
-		<li class="col-sm-6 col-md-6">
+		<li class="col-sm-6 col-md-6 col-xl-4">
 			<article>
 				<?php if($project->link()->isNotEmpty()):?>
-					<a href="<?= $project->link() ?>" title="<?= $project->title()?>">
+					<a href="<?= $project->link() ?>" title="<?= $project->title()?>" target="_blank">
 				<?php else:?>
 					<a href="<?= $project->url() ?>" title="<?= $project->title()?>">
 				<?php endif?>

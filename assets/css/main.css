@@ -10,7 +10,6 @@
 body {
   margin: 0;
   line-height: 1.5; 
-  /*font-size: 20px;*/
   font-size: 18px;
   font-family: Georgia, serif;
   overflow-x: hidden;
@@ -32,7 +31,6 @@ a {
 }
 
 a:hover {
-  /*color: var(--main-color);*/
   border-bottom: 1px solid currentcolor; 
 }
 
@@ -47,12 +45,7 @@ p{
   line-height: 1.45; 
   font-size: 18px;
   margin-top: 20px;
-  /*font-size: 20px;*/
 }
-
-/*p a{
-  border-bottom: 1px solid var(--main-color);
-}*/
 
 
 figcaption{
@@ -75,7 +68,6 @@ h1{
 h2, h3{
   font-family: var(--title-font); 
   font-weight:bold;
-  /*font-size: 35px;*/
   font-size: 23px;
   margin-bottom: 0;
   line-height: 1.4;
@@ -101,11 +93,9 @@ h1 + h2 {
 main.row, main {
   padding: 100px var(--normal-margin) 0px var(--normal-margin);
   width: 100%;
-  max-width: 1800px;
-  /*margin: auto;*/
+  max-width: 1920px;
+  margin: auto;
   margin-bottom: 200px; 
-  margin-left:0;
-  margin-right: 0;
 }
 
 main .content figure {
@@ -136,7 +126,6 @@ main .content figure {
 }
 
 .featured-img.background{
-  /*background-color: var(--main-color);*/
   filter: grayscale(0);
   position:absolute;
   top: 0;
@@ -152,14 +141,11 @@ main .content figure {
 
 .bigimage{
   width: calc(100% + 40px);
-  /*width: 182%;*/
   position: relative; 
   left: -20px;
-  /*left: -41%;*/
 }
 
 .bigimage figcaption{
-  /*margin-left: 22.5%;*/
   margin-left: 20px;
 }
 
@@ -181,7 +167,6 @@ main .content figure {
   margin-bottom: 50px;
   padding-left: 0;
   padding-right: var(--big-margin);
-  /*padding: 0;*/
 }
 
 
@@ -189,7 +174,6 @@ main .content figure {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 18px;
-  /*margin-bottom: var(--small-margin);*/
 }
 
 .news .featured-img{
@@ -200,14 +184,12 @@ main .content figure {
 .news p{
   font-size: 15px;
   margin-top: 0;
-  /*padding-left: 2rem;*/
 }
 
 
 .news article{
   padding: 0;
   margin-bottom: var(--big-margin);
-  /*padding-right: var(--big-margin);*/
 }
 
 /*------- F I N     H O M E ----------*/
@@ -252,7 +234,6 @@ main .content figure {
   }
 
   .footnote a{
-/*    color: var(--main-color);*/
     border:0;
   }
 
@@ -275,10 +256,6 @@ main .content figure {
     padding-left: 16px;
   }
 
-/*  #footnotes .footnotereverse a{
-    color: var(--main-color);
-  }*/
-
   #footnotes .footnotereverse a:hover{
     border: none;
   }
@@ -290,7 +267,6 @@ main .content figure {
   }
 
   #related h3{
-    /*font-size: 1.3em;*/
     margin-bottom: var(--normal-margin);
   }
 
@@ -315,6 +291,7 @@ main .content figure {
   #related .featured-img{
     height: 23vw;
     min-height: 50px;
+    max-height: 150px;
   }
 
   .menu-secondaire{
@@ -410,10 +387,6 @@ main .content figure {
     -o-transition: all .5s ease;
     transition: all .5s ease;
   }
-
-/*  #toggle-related .span-nochecked:hover, #toggle-related .span-checked:hover{
-    color: var(--main-color);
-  }*/
    
   #toggle-related + label .span-nochecked { display: block; }
   #toggle-related + label .span-checked { display: none;}
@@ -440,10 +413,6 @@ main .content figure {
     transition: all .5s ease;
   }
 
- /* #toggle-footnotes .span-nochecked:hover, #toggle-footnotes .span-checked:hover{
-    color: var(--main-color);
-  }*/
-   
   #toggle-footnotes + label .span-nochecked { display: block; }
   #toggle-footnotes + label .span-checked { display: none;}
 
@@ -458,7 +427,6 @@ main .content figure {
 .gallery h2{
   margin: 0;
   font-size: 18px;
-  /*margin-bottom: var(--small-margin);*/
 }
 
 .gallery .featured-img{
@@ -469,7 +437,6 @@ main .content figure {
 .gallery p{
   font-size: 15px;
   margin-top: 0;
-  /*padding-left: 2rem;*/
 }
 
 .gallery p.read-more{
@@ -551,18 +518,22 @@ main .content figure {
 
 /* ------- F I N      P R O J E C T S  ----------*/
 
-
+/* RESPONSIVE DESKTOP SCREEN */
 @media only screen and (min-width: 48em) {
 
-  h1{
-    font-size: 60px;
-  }
+  /* ----- general ----- */
+
+  .show-for-small-only {display: none !important;}
+  .hide-for-small-only {display: block !important;} 
+
+  h1 {font-size: 60px;}
+  h2 {font-size: 35px;}
 
   main.row, main {
     padding: 140px var(--normal-margin) 0px var(--normal-margin);
   }
 
-  /* home*/
+  /* ----- home ----- */
   .news{
     margin-top:  var(--normal-margin);
   }
@@ -572,8 +543,7 @@ main .content figure {
     padding-right: var(--big-margin);
   }
 
-  /* default */
-
+  /* ----- default ----- */
   .content h1,  .content h2,  .content h3,  .content p,  .content ul, .content ol, .content figcaption, .content figure:not(.bigimage), .content hr{
     width: 55%;
     max-width: 900px;
@@ -595,8 +565,6 @@ main .content figure {
 
   }
 
-  h2 {font-size: 35px;}
-
   #related ul{
     padding: 0;
   }
@@ -612,7 +580,7 @@ main .content figure {
   }
 
 
-  /* projects*/
+  /* ----- projects -----*/
   .gallery{
     margin-top:  var(--big-margin);
   }
@@ -631,10 +599,82 @@ main .content figure {
     padding: 0 1em;
   }
 
-  /*general*/
 
-  .show-for-small-only {
-    display: none !important; }
-  .hide-for-small-only {
-    display: block !important; } 
+}
+
+/* RESPONSIVE LARGE SCREEN */
+@media only screen and (min-width: 1824px) {
+
+  .col-xl-1 {
+    -ms-flex-preferred-size: 8.33333333%;
+    flex-basis: 8.33333333%;
+    max-width: 8.33333333%;
   }
+
+  .col-xl-2 {
+    -ms-flex-preferred-size: 16.66666667%;
+    flex-basis: 16.66666667%;
+    max-width: 16.66666667%;
+  }
+
+  .col-xl-3 {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  .col-xl-4 {
+    -ms-flex-preferred-size: 33.33333333%;
+    flex-basis: 33.33333333%;
+    max-width: 33.33333333%;
+  }
+
+  .col-xl-5 {
+    -ms-flex-preferred-size: 41.66666667%;
+    flex-basis: 41.66666667%;
+    max-width: 41.66666667%;
+  }
+
+  .col-xl-6 {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .col-xl-7 {
+    -ms-flex-preferred-size: 58.33333333%;
+    flex-basis: 58.33333333%;
+    max-width: 58.33333333%;
+  }
+
+  .col-xl-8 {
+    -ms-flex-preferred-size: 66.66666667%;
+    flex-basis: 66.66666667%;
+    max-width: 66.66666667%;
+  }
+
+  .col-xl-9 {
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  .col-xl-10 {
+    -ms-flex-preferred-size: 83.33333333%;
+    flex-basis: 83.33333333%;
+    max-width: 83.33333333%;
+  }
+
+  .col-xl-11 {
+    -ms-flex-preferred-size: 91.66666667%;
+    flex-basis: 91.66666667%;
+    max-width: 91.66666667%;
+  }
+
+  .col-xl-12 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+}
