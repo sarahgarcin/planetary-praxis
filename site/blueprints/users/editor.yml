@@ -1,0 +1,10 @@
+title: Editor
+description: Can't delete pages, edit users and update site settings.
+permissions:
+  site:
+    update: false
+  pages:
+    delete: false
+  users: false
+  user:
+    changeRole: false
