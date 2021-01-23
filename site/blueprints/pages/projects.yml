@@ -9,13 +9,17 @@ columns:
         headline: Drafts
         type: pages
         status: draft
-        templates: project
+        templates: 
+          - project
+          - category
 
       published:
         headline: Published Articles
         type: pages
         status: listed
-        templates: project
+        templates: 
+          - project
+          - category
   - width: 1/2
     fields:
       text: 

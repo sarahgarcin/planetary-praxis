@@ -40,7 +40,7 @@ trait FileModifications
      * Crops the image by the given width and height
      *
      * @param int $width
-     * @param int $height
+     * @param int|null $height
      * @param string|array $options
      * @return \Kirby\Cms\FileVersion|\Kirby\Cms\File
      */
@@ -69,6 +69,26 @@ trait FileModifications
     }
 
     /**
+     * Alias for File::bw()
+     *
+     * @return \Kirby\Cms\FileVersion|\Kirby\Cms\File
+     */
+    public function grayscale()
+    {
+        return $this->thumb(['grayscale' => true]);
+    }
+
+    /**
+     * Alias for File::bw()
+     *
+     * @return \Kirby\Cms\FileVersion|\Kirby\Cms\File
+     */
+    public function greyscale()
+    {
+        return $this->thumb(['grayscale' => true]);
+    }
+
+    /**
      * Sets the JPEG compression quality
      *
      * @param int $quality
@@ -83,10 +103,11 @@ trait FileModifications
      * Resizes the file with the given width and height
      * while keeping the aspect ratio.
      *
-     * @param int $width
-     * @param int $height
-     * @param int $quality
+     * @param int|null $width
+     * @param int|null $height
+     * @param int|null $quality
      * @return \Kirby\Cms\FileVersion|\Kirby\Cms\File
+     * @throws \Kirby\Exception\InvalidArgumentException
      */
     public function resize(int $width = null, int $height = null, int $quality = null)
     {
@@ -103,7 +124,7 @@ trait FileModifications
      * also be set up in the config with the thumbs.srcsets option.
      * @since 3.1.0
      *
-     * @param array|string $sizes
+     * @param array|string|null $sizes
      * @return string|null
      */
     public function srcset($sizes = null): ?string
@@ -155,6 +176,7 @@ trait FileModifications
      *
      * @param array|null|string $options
      * @return \Kirby\Cms\FileVersion|\Kirby\Cms\File
+     * @throws \Kirby\Exception\InvalidArgumentException
      */
     public function thumb($options = null)
     {

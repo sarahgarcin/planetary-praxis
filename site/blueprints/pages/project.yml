@@ -6,6 +6,12 @@ fields:
   cover: 
     label: Cover Image
     type: files
+  # category:
+  #   label: Categories
+  #   type: checkboxes
+  #   options: query
+  #   query: site.tags.toStructure
+  #   width: 1/2
   summary:
     label: Summary
     type: textarea

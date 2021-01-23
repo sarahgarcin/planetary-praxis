@@ -429,6 +429,16 @@ main .content figure {
   font-size: 18px;
 }
 
+.gallery > hr{
+  margin-left: -16px;
+}
+
+.gallery h2.previous{
+  font-size: 35px;
+  margin-bottom: calc(var(--big-margin)*1.5);
+  margin-left: -16px;
+}
+
 .gallery .featured-img{
   height: 5vw;
   margin-bottom: var(--normal-margin);
@@ -518,6 +528,106 @@ main .content figure {
 
 /* ------- F I N      P R O J E C T S  ----------*/
 
+
+/* ------- C A T E G O R Y  ----------*/
+.category .projects-gallery{
+  width: 100%;
+}
+
+.category hr{
+  margin-top: calc(var(--big-margin)*2);
+}
+
+.category .projects-gallery > h2{
+  text-align: center; 
+  margin-top:  var(--big-margin);
+  margin-bottom: var(--big-margin);
+}
+
+.category .projects-gallery .projects{
+  width: 100%; 
+  max-width: 100%;
+  margin-left: 0;
+  justify-content: center;
+
+}
+
+.category .projects-gallery .projects li{
+  margin-bottom: var(--big-margin);
+}
+
+.category .projects-gallery .projects li:last-child{
+  margin-bottom: 0;
+}
+
+.category .projects-gallery .projects li .project-title{
+  font-size: 18px; 
+  width: 100%
+}
+
+.category .projects-gallery .projects li .project-summary p{
+  font-size: 15px; 
+  width: 100%;
+  margin-top: 0;
+}
+
+/* ------- F I N      C A T E G O R Y  ----------*/
+
+/* -------------- E V E N T S --------------- */
+.events li .event-presentation{
+  border-top: 2px solid currentcolor;
+  padding-top: var(--normal-margin);
+}
+
+.events .event-date{
+  margin-bottom: var(--small-margin);
+}
+
+.archives-btn{
+  margin-top: -20px;
+  padding: 5px 10px;
+  display: inline-block;
+  border: 2px solid currentcolor;
+}
+.archives-btn a:hover{
+  border: none;
+}
+
+/* -------------- F I N   E V E N T S  --------------- */
+
+
+/* -------------- N E W S L E T T E R --------------- */
+.newsletter-form input{
+  width: 100%;
+  margin-bottom: var(--normal-margin);
+  height: 35px;
+  font-size: 18px;
+  font-family: Georgia, sans-serif;
+}
+
+.newsletter-form {
+  padding: 0;
+}
+
+#mc_embed_signup h2{
+  margin-bottom: var(--big-margin);
+}
+
+.newsletter-form input[type="submit"]{
+  width: auto;
+  border: 1px solid #000; 
+  cursor: pointer; 
+  color: #000; 
+  background: #FFF;
+  padding: 5px 10px;
+  margin-top: 20px; 
+  margin-bottom: 50px;
+  font-size: 18px;
+  font-family: Georgia, sans-serif;
+}
+
+/* -------------- F I N   N E W S L E T T E R   --------------- */
+
 /* RESPONSIVE DESKTOP SCREEN */
 @media only screen and (min-width: 48em) {
 
@@ -597,6 +707,15 @@ main .content figure {
 
   .person-presentation{
     padding: 0 1em;
+  }
+
+  /* newsletter */
+  .newsletter-form {
+    padding: 0 1rem;
+  }
+
+  #mc_embed_signup{
+    padding: 0 var(--normal-margin)
   }
 
 

@@ -136,30 +136,34 @@ function deprecated(string $message): bool
     return false;
 }
 
-/**
- * Simple object and variable dumper
- * to help with debugging.
- *
- * @param mixed $variable
- * @param bool $echo
- * @return string
- */
-function dump($variable, bool $echo = true): string
-{
-    $kirby = App::instance();
-    return $kirby->component('dump')($kirby, $variable, $echo);
+if (function_exists('dump') === false) {
+    /**
+     * Simple object and variable dumper
+     * to help with debugging.
+     *
+     * @param mixed $variable
+     * @param bool $echo
+     * @return string
+     */
+    function dump($variable, bool $echo = true): string
+    {
+        $kirby = App::instance();
+        return $kirby->component('dump')($kirby, $variable, $echo);
+    }
 }
 
-/**
- * Smart version of echo with an if condition as first argument
- *
- * @param mixed $condition
- * @param mixed $value The string to be echoed if the condition is true
- * @param mixed $alternative An alternative string which should be echoed when the condition is false
- */
-function e($condition, $value, $alternative = null)
-{
-    echo r($condition, $value, $alternative);
+if (function_exists('e') === false) {
+    /**
+     * Smart version of echo with an if condition as first argument
+     *
+     * @param mixed $condition
+     * @param mixed $value The string to be echoed if the condition is true
+     * @param mixed $alternative An alternative string which should be echoed when the condition is false
+     */
+    function e($condition, $value, $alternative = null)
+    {
+        echo r($condition, $value, $alternative);
+    }
 }
 
 /**
@@ -223,11 +227,11 @@ function go(string $url = null, int $code = 302)
 /**
  * Shortcut for html()
  *
- * @param string $string unencoded text
+ * @param string|null $string unencoded text
  * @param bool $keepTags
  * @return string
  */
-function h(string $string = null, bool $keepTags = false)
+function h(?string $string, bool $keepTags = false)
 {
     return Html::encode($string, $keepTags);
 }
@@ -235,11 +239,11 @@ function h(string $string = null, bool $keepTags = false)
 /**
  * Creates safe html by encoding special characters
  *
- * @param string $string unencoded text
+ * @param string|null $string unencoded text
  * @param bool $keepTags
  * @return string
  */
-function html(string $string = null, bool $keepTags = false)
+function html(?string $string, bool $keepTags = false)
 {
     return Html::encode($string, $keepTags);
 }
@@ -401,15 +405,25 @@ function kirby()
  * @param string|array $type
  * @param string $value
  * @param array $attr
+ * @param array $data
  * @return string
  */
-function kirbytag($type, string $value = null, array $attr = []): string
+function kirbytag($type, string $value = null, array $attr = [], array $data = []): string
 {
     if (is_array($type) === true) {
-        return App::instance()->kirbytag(key($type), current($type), $type);
+        $kirbytag = $type;
+        $type     = key($kirbytag);
+        $value    = current($kirbytag);
+        $attr     = $kirbytag;
+
+        // check data attribute and separate from attr data if exists
+        if (isset($attr['data']) === true) {
+            $data = $attr['data'];
+            unset($attr['data']);
+        }
     }
 
-    return App::instance()->kirbytag($type, $value, $attr);
+    return App::instance()->kirbytag($type, $value, $attr, $data);
 }
 
 /**
@@ -591,36 +605,7 @@ function r($condition, $value, $alternative = null)
 }
 
 /**
- * Rounds the minutes of the given date
- * by the defined step
- *
- * @param string $date
- * @param int $step
- * @return string|null
- */
-function timestamp(string $date = null, int $step = null): ?string
-{
-    if (V::date($date) === false) {
-        return null;
-    }
-
-    $date = strtotime($date);
-
-    if ($step === null) {
-        return $date;
-    }
-
-    $hours   = date('H', $date);
-    $minutes = date('i', $date);
-    $minutes = floor($minutes / $step) * $step;
-    $minutes = str_pad($minutes, 2, 0, STR_PAD_LEFT);
-    $date    = date('Y-m-d', $date) . ' ' . $hours . ':' . $minutes;
-
-    return strtotime($date);
-}
-
-/**
- * Returns the currrent site object
+ * Returns the current site object
  *
  * @return \Kirby\Cms\Site
  */
@@ -755,6 +740,35 @@ function t($key, string $fallback = null)
 function tc($key, int $count)
 {
     return I18n::translateCount($key, $count);
+}
+
+/**
+ * Rounds the minutes of the given date
+ * by the defined step
+ *
+ * @param string $date
+ * @param int $step
+ * @return string|null
+ */
+function timestamp(string $date = null, int $step = null): ?string
+{
+    if (V::date($date) === false) {
+        return null;
+    }
+
+    $date = strtotime($date);
+
+    if ($step === null) {
+        return $date;
+    }
+
+    $hours   = date('H', $date);
+    $minutes = date('i', $date);
+    $minutes = floor($minutes / $step) * $step;
+    $minutes = str_pad($minutes, 2, 0, STR_PAD_LEFT);
+    $date    = date('Y-m-d', $date) . ' ' . $hours . ':' . $minutes;
+
+    return strtotime($date);
 }
 
 /**

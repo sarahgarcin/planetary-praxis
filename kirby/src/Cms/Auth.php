@@ -6,6 +6,7 @@ use Kirby\Data\Data;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Exception\NotFoundException;
 use Kirby\Exception\PermissionException;
+use Kirby\Http\Idn;
 use Kirby\Http\Request\Auth\BasicAuth;
 use Kirby\Toolkit\F;
 use Throwable;
@@ -63,6 +64,8 @@ class Auth
      *
      * @param \Kirby\Http\Request\Auth\BasicAuth|null $auth
      * @return \Kirby\Cms\User|null
+     * @throws \Kirby\Exception\InvalidArgumentException if the authorization header is invalid
+     * @throws \Kirby\Exception\PermissionException if basic authentication is not allowed
      */
     public function currentUserFromBasicAuth(BasicAuth $auth = null)
     {
@@ -83,6 +86,16 @@ class Auth
         }
 
         return $this->validatePassword($auth->username(), $auth->password());
+    }
+
+    /**
+     * Returns the currently impersonated user
+     *
+     * @return \Kirby\Cms\User|null
+     */
+    public function currentUserFromImpersonation()
+    {
+        return $this->impersonate;
     }
 
     /**
@@ -124,10 +137,11 @@ class Auth
     /**
      * Become any existing user
      *
-     * @param string|null $who
+     * @param string|null $who User ID or email address
      * @return \Kirby\Cms\User|null
+     * @throws \Kirby\Exception\NotFoundException if the given user cannot be found
      */
-    public function impersonate(string $who = null)
+    public function impersonate(?string $who = null)
     {
         switch ($who) {
             case null:
@@ -246,8 +260,13 @@ class Auth
      */
     public function validatePassword(string $email, string $password)
     {
+        // ensure that email addresses with IDN domains are in Unicode format
+        $email = Idn::decodeEmail($email);
+
         // check for blocked ips
         if ($this->isBlocked($email) === true) {
+            $this->kirby->trigger('user.login:failed', compact('email'));
+
             if ($this->kirby->option('debug') === true) {
                 $message = 'Rate limit exceeded';
             } else {
@@ -319,6 +338,9 @@ class Auth
         $log['by-ip']    = $log['by-ip'] ?? [];
         $log['by-email'] = $log['by-email'] ?? [];
 
+        // remove all elements on the top level with different keys (old structure)
+        $log = array_intersect_key($log, array_flip(['by-ip', 'by-email']));
+
         // remove entries that are no longer needed
         $originalLog = $log;
         $time = time() - $this->kirby->option('auth.timeout', 3600);
@@ -327,9 +349,6 @@ class Auth
                 return $entry['time'] > $time;
             });
         }
-
-        // remove all elements on the top level with different keys (old structure)
-        $log = array_intersect_key($log, array_flip(['by-ip', 'by-email']));
 
         // write new log to the file system if it changed
         if ($read === false || $log !== $originalLog) {
@@ -380,6 +399,8 @@ class Auth
      */
     public function track(string $email): bool
     {
+        $this->kirby->trigger('user.login:failed', compact('email'));
+
         $ip   = $this->ipHash();
         $log  = $this->log();
         $time = time();
@@ -416,16 +437,19 @@ class Auth
     /**
      * Returns the current authentication type
      *
+     * @param bool $allowImpersonation If set to false, 'impersonate' won't
+     *                                 be returned as authentication type
+     *                                 even if an impersonation is active
      * @return string
      */
-    public function type(): string
+    public function type(bool $allowImpersonation = true): string
     {
         $basicAuth = $this->kirby->option('api.basicAuth', false);
         $auth      = $this->kirby->request()->auth();
 
         if ($basicAuth === true && $auth && $auth->type() === 'basic') {
             return 'basic';
-        } elseif ($this->impersonate !== null) {
+        } elseif ($allowImpersonation === true && $this->impersonate !== null) {
             return 'impersonate';
         } else {
             return 'session';
@@ -436,13 +460,15 @@ class Auth
      * Validates the currently logged in user
      *
      * @param \Kirby\Session\Session|array|null $session
+     * @param bool $allowImpersonation If set to false, only the actually
+     *                                 logged in user will be returned
      * @return \Kirby\Cms\User
      *
      * @throws \Throwable If an authentication error occured
      */
-    public function user($session = null)
+    public function user($session = null, bool $allowImpersonation = true)
     {
-        if ($this->impersonate !== null) {
+        if ($allowImpersonation === true && $this->impersonate !== null) {
             return $this->impersonate;
         }
 

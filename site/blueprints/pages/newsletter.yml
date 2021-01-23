@@ -1,0 +1,10 @@
+title: Newsletter
+preset: page
+pages: false
+
+fields:
+  text:
+    label: Text presentation
+    type: textarea
+    size: medium
+

@@ -43,6 +43,15 @@ tabs:
           sitecolor: 
             label: Website main color
             type: color
+          # tags: 
+          #   label: Categories
+          #   type: structure
+          #   fields: 
+          #     title: 
+          #       label: Category label
+          #       type: text
+          #       width: 1/3
+          #   help: Add a new category here, then assign a category to a page
           author: 
             label: Author(s)
             type: text

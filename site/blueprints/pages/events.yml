@@ -1,0 +1,31 @@
+title: Events
+pages: true
+
+
+columns:
+  - width: 1/2
+    sections:
+      drafts:
+        headline: Drafts
+        type: pages
+        status: draft
+        templates: event
+      unlisted:
+        headline: Unlisted
+        type: pages
+        status: unlisted
+        templates: events
+      published:
+        headline: Published Articles
+        type: pages
+        status: listed
+        templates: event
+  - width: 1/2
+    fields:
+      text: 
+        label: Events text presentation
+        type: markdown
+
+
+
+

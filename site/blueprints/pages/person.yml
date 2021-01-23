@@ -3,6 +3,12 @@ preset: page
 pages: false
 
 fields:
+  prevsection: 
+    label: Display this person in the previous Researchers / Contributors part
+    type: toggle
+    text: 
+      - "no"
+      - "yes"
   role: 
     label: Role
     type: text

@@ -1,0 +1,25 @@
+title: Event
+preset: page
+pages: false
+
+fields:
+  thedate:
+    label: Date
+    type: date
+  summary:
+    label: Summary
+    type: textarea
+  link: 
+    label: Link to project page
+    type: url 
+    help: Fill this field with the project url if the project is linked to an external page
+  text:
+    label: Text
+    type: textarea
+    size: medium
+  related: 
+    label: Related pages
+    type: pages
+    query: page.siblings(false)
+
+
