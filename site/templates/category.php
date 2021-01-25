@@ -7,7 +7,7 @@
 			<?php if($page->hasChildren()):?>
 			<div class="projects-gallery">
 					<hr>
-					<h2>Projects</h2>
+					<h2>Related</h2>
 					<ul class="projects row">
 						<?php foreach($page->children()->listed() as $project):?>
 							<li class="col-sm-6 col-md-4 col-xl-3">
@@ -42,7 +42,7 @@
 				$related = $page->related()->toPages();
 				if ($related->count() > 0):
 				?>
-				  <h3>Related</h3>
+				  <h3>Project areas</h3>
 				  <ul class="row">
 				    <?php foreach($related as $article): ?>
 				    <li class="col-xs-6 col-md-3">

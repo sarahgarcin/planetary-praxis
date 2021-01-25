@@ -30,8 +30,14 @@
 						<article class="row">
 							<div class="event-presentation col-xs-12 col-sm-9 col-xl-6" style="border-color: <?=$site->sitecolor()?>">
 								<p class="event-date" style="color: <?=$site->sitecolor()?>"><?= $event->thedate()->toDate('d/m/Y')?></p>
+								<?php if($event->link()->isNotEmpty()):?>
+									<a href="<?= $event->link() ?>" title="<?= $event->title()?>" target="_blank">
+								<?php else:?>
+									<a href="<?= $event->url() ?>" title="<?= $event->title()?>">
+								<?php endif?>
 								<h2 class="event-title"><?= $event->title()?></h2>
 								<?= $event->summary()->kt()?>
+								</a>
 							</div>
 						</article>
 				</li>
