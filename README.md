@@ -29,9 +29,13 @@ This repo is a kirby theme for Planetary Praxis websites.
 
 → **Projects** template can be use if you want to have a gallery of projects page
 
-→ Use the **Project** template in the projects page (**Projects** page should have children with **Project** template)
+→ Use the **Category** template in the projects page to create a new category of projects (**Projects** page should have children with **Category** template)
+
+→ Use the **Project** template in the **Category** page (**Category** page should have children with **Project** template) 
 
 → **Events** template can be use if you want to add events, the system archives automatically the past event in the unlister folder named "Archives" (**Events** page should have children with **Event** template)
+
+→ **Newsletter** template is used for the Newsletter Page. It displays a form linked to the Mailchimp database.
 
 ### Writing content with Markdown
 #### Bold: 
