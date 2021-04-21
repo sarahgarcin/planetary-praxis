@@ -4,14 +4,15 @@
 	
 	<main class="row">
 		<section class="introduction col-xs-12 col-md-3">
-			<?php $archives = $page->find('archives')?>
+			<!-- removing archive button but keep the system -->
+			<!-- <?php $archives = $page->find('archives')?>
 			<?php if( $archives && $archives->children()->count() > 0):?>
 				<div class="archives-btn" style='border-color: <?=$site->sitecolor()?>'>
 					<a href="<?= $archives->url()?>" title="<?= $archives->title()?>">
 						<?= $archives->title()?>
 					</a>
 				</div>
-			<?php endif;?>
+			<?php endif;?> -->
 			<?php if($page->uid() == "archives"):?>
 				<?php $events = $page->parent();?>
 				<div class="archives-btn" style="border-color: <?=$site->sitecolor()?>"">
@@ -31,13 +32,16 @@
 							<div class="event-presentation col-xs-12 col-sm-9 col-xl-6" style="border-color: <?=$site->sitecolor()?>">
 								<p class="event-date" style="color: <?=$site->sitecolor()?>"><?= $event->thedate()->toDate('d/m/Y')?></p>
 								<?php if($event->link()->isNotEmpty()):?>
-									<a href="<?= $event->link() ?>" title="<?= $event->title()?>" target="_blank">
+									<a href="<?= $event->link() ?>" title="<?= $event->title()?>" target="_blank"><h2 class="event-title"><?= $event->title()?></h2></a>
 								<?php else:?>
-									<a href="<?= $event->url() ?>" title="<?= $event->title()?>">
+									<a href="<?= $event->url() ?>" title="<?= $event->title()?>"><h2 class="event-title"><?= $event->title()?></h2></a>
 								<?php endif?>
-								<h2 class="event-title"><?= $event->title()?></h2>
 								<?= $event->summary()->kt()?>
-								</a>
+								<?php if($event->link()->isNotEmpty()):?>
+									<p class="more-infos"><a href="<?= $event->link() ?>" title="<?= $event->title()?>" target="_blank">+ more infos</a></p>
+								<?php else:?>
+									<p class="more-infos"><a href="<?= $event->url() ?>" title="<?= $event->title()?>">+ more infos</a></p>
+								<?php endif?>
 							</div>
 						</article>
 				</li>
