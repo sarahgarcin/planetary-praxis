@@ -4,29 +4,12 @@
 	
 	<main class="row">
 		<section class="introduction col-xs-12 col-md-3">
-			<!-- removing archive button but keep the system -->
-			<!-- <?php $archives = $page->find('archives')?>
-			<?php if( $archives && $archives->children()->count() > 0):?>
-				<div class="archives-btn" style='border-color: <?=$site->sitecolor()?>'>
-					<a href="<?= $archives->url()?>" title="<?= $archives->title()?>">
-						<?= $archives->title()?>
-					</a>
-				</div>
-			<?php endif;?> -->
-			<?php if($page->uid() == "archives"):?>
-				<?php $events = $page->parent();?>
-				<div class="archives-btn" style="border-color: <?=$site->sitecolor()?>"">
-					<a href="<?= $events->url()?>" title="<?= $events->title()?>">
-						← <?= $events->title()?>
-					</a>
-				</div>
-			<?php endif;?>
 			<h1><?= $page->title()?></h1>
 			<?= $page->text()->kt()?>
 		</section>
 		<section class="gallery col-xs-12 col-md-9">
 			<ul class="projects events row">
-				<?php foreach($page->children()->sortBy('thedate', 'asc')->listed() as $event):?>
+				<?php foreach($events = $page->children()->sortBy('thedate', 'desc')->listed()->paginate(20) as $event):?>
 					<li class="col-xs-12">
 						<article class="row">
 							<div class="event-presentation col-xs-12 col-sm-9 col-xl-6" style="border-color: <?=$site->sitecolor()?>">
@@ -44,14 +27,27 @@
 								<?php endif?>
 							</div>
 						</article>
-				</li>
-				<?php if($event->thedate() < $currentdatetime && $page->uid() != "archives" && $event->thedate() != null):
-					$newpath = $event->parent()->find('archives')->contentFileDirectory();
-					Dir::move($event->contentFileDirectory(), $newpath.'/'.$event->dirname());
-				endif;?>
+				</li>	
 				<?php endforeach?>
 				
 			</ul>
+			<?php $pagination = $events->pagination() ?>
+			<?php if ($pagination->hasPages()): ?>
+				<nav class="pagination col-xs-12 col-sm-9 col-xl-6 row">
+				  <?php if ($pagination->hasNextPage()): ?>
+				  <a class="prev" href="<?= $pagination->nextPageURL() ?>">
+				    ‹ older events
+				  </a>
+				  <?php endif ?>
+
+				  <?php if ($pagination->hasPrevPage()): ?>
+				  <a class="next" href="<?= $pagination->prevPageURL() ?>">
+				    newer events ›
+				  </a>
+				  <?php endif ?>
+
+				</nav>
+			<?php endif ?>
 		</section>
 	</main>
 

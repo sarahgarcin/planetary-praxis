@@ -579,6 +579,11 @@ main .content figure {
   padding-top: var(--normal-margin);
 }
 
+.events li:last-child .event-presentation{
+  border-bottom: 2px solid currentcolor;
+  padding-bottom: var(--big-margin);
+}
+
 .events h2{
   font-size: 35px;
 }
@@ -604,6 +609,19 @@ p.more-infos{
 }
 .archives-btn a:hover{
   border: none;
+}
+
+.pagination{
+  padding: 0;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.pagination .next{
+  display: block;
+  position: absolute; 
+  right: 0;
 }
 
 /* -------------- F I N   E V E N T S  --------------- */
