@@ -579,8 +579,21 @@ main .content figure {
   padding-top: var(--normal-margin);
 }
 
+.events h2{
+  font-size: 35px;
+}
+
+.event-presentation figure{
+  width: 60%;
+  margin: var(--small-margin) 0;
+}
+
 .events .event-date{
   margin-bottom: var(--small-margin);
+}
+
+p.more-infos{
+  margin-top: var(--normal-margin);
 }
 
 .archives-btn{
