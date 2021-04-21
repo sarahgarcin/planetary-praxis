@@ -31,6 +31,8 @@ This repo is a kirby theme for Planetary Praxis websites.
 
 → Use the **Project** template in the projects page (**Projects** page should have children with **Project** template)
 
+→ **Events** template can be use if you want to add events, the system archives automatically the past event in the unlister folder named "Archives" (**Events** page should have children with **Event** template)
+
 ### Writing content with Markdown
 #### Bold: 
 ```
