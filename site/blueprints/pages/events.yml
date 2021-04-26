@@ -25,6 +25,10 @@ columns:
       text: 
         label: Events text presentation
         type: markdown
+      more: 
+        label: Clickable text that goes to the event page
+        type: text
+        help: example "+ more info"
 
 
 

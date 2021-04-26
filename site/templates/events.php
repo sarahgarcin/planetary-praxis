@@ -21,9 +21,9 @@
 								<?php endif?>
 								<?= $event->summary()->kt()?>
 								<?php if($event->link()->isNotEmpty()):?>
-									<p class="more-infos"><a href="<?= $event->link() ?>" title="<?= $event->title()?>" target="_blank">+ more infos</a></p>
+									<p class="more-infos"><a href="<?= $event->link() ?>" title="<?= $event->title()?>" target="_blank"><?= $page->more() ?></a></p>
 								<?php else:?>
-									<p class="more-infos"><a href="<?= $event->url() ?>" title="<?= $event->title()?>">+ more infos</a></p>
+									<p class="more-infos"><a href="<?= $event->url() ?>" title="<?= $event->title()?>"><?= $page->more() ?></a></p>
 								<?php endif?>
 							</div>
 						</article>
