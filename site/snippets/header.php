@@ -78,18 +78,16 @@
   <meta property="og:title"        content="<?php echo $page->title()->html() ?>">
   <meta property="og:description"  content="<?php e( $page->text()->isNotEmpty(), $page->text()->excerpt(600), $site->description()->excerpt(600)) ?>">
   <meta property="og:type"         content="website">
-  <?php if ( $page->hasImages() && $image = $site->images()->sortBy('sort', 'asc')->first() ): ?>
+  <?php $image = $site->socialimage()->toFile() ?>
   <meta property="og:image"        content="<?php echo $image->resize(800, 800)->url() ?>">
-  <?php endif; ?>
 
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:site"        content="<?php echo $page->url() ?>">
   <meta name="twitter:creator"     content="<?php echo $site->author()->html() ?>">
   <meta name="twitter:title"       content="<?php echo $page->title()->html() ?>">
   <meta name="twitter:description" content="<?php e( $page->text()->isNotEmpty(), $page->text()->excerpt(600), $site->description()->excerpt(600)) ?>">
-  <?php if ( $page->hasImages() && $image = $page->images()->sortBy('sort', 'asc')->first() ): ?>
+  <?php $image = $site->socialimage()->toFile() ?>
   <meta name="twitter:image"       content="<?php echo $image->resize(800, 800)->url() ?>">
-  <?php endif; ?>
 
   <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

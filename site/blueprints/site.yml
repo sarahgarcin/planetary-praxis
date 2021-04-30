@@ -43,6 +43,9 @@ tabs:
           sitecolor: 
             label: Website main color
             type: color
+          socialimage: 
+            label: Image for social medias
+            type: files
           # tags: 
           #   label: Categories
           #   type: structure
