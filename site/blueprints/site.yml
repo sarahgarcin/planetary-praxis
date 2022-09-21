@@ -46,6 +46,10 @@ tabs:
           socialimage: 
             label: Image for social medias
             type: files
+          footerlogos: 
+            label: Footer logos
+            type: files
+            multiple: true
           # tags: 
           #   label: Categories
           #   type: structure

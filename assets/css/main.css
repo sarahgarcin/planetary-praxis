@@ -659,6 +659,24 @@ p.more-infos{
 
 /* -------------- F I N   N E W S L E T T E R   --------------- */
 
+/* -------------- F O O T E R   --------------- */
+footer{
+  margin: var(--small-margin) var(--normal-margin);
+}
+
+.partners-logos{
+  padding:0;
+  filter: grayscale(1);
+  margin:0;
+}
+
+.partners-logos li{
+  width: 190px;
+  padding: 0rem 1rem;
+}
+
+/* -------------- F I N   F O O T E R   --------------- */
+
 /* RESPONSIVE DESKTOP SCREEN */
 @media only screen and (min-width: 48em) {
 
